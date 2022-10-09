@@ -1,5 +1,5 @@
-public interface Shape {
+public abstract class Shape {
 
-    String shapeName();
+    public abstract String getName();
 
 }
