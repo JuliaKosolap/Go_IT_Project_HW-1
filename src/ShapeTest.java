@@ -6,10 +6,10 @@ public class ShapeTest {
      Shape circle = new Circle();
      Shape ellipse = new Ellipse();
      Shape quad = new Quad();
-     createShape.create(rectangle);
-     createShape.create(triangle);
-     createShape.create(circle);
-     createShape.create(ellipse);
-     createShape.create(quad);
+     System.out.println(createShape.create(rectangle));
+     System.out.println(createShape.create(triangle));
+     System.out.println(createShape.create(circle));
+     System.out.println(createShape.create(ellipse));
+     System.out.println(createShape.create(quad));
     }
 }
