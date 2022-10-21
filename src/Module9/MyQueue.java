@@ -1,6 +1,8 @@
+package Module9;
+
 import java.util.Arrays;
 
-public class MyArrayList<E> {
+public class MyQueue<E> {
     transient Object[] currentList = {};
     private int size = 0;
 
@@ -14,11 +16,6 @@ public class MyArrayList<E> {
         array[array.length - 1] = value;
         size = size + 1;
         currentList = array;
-    }
-
-    public E get(int index) {
-        E[] array = (E[]) currentList;
-        return array[index];
     }
 
     public void remove(int index) {
@@ -36,10 +33,30 @@ public class MyArrayList<E> {
         }
     }
 
+    public E peek() {
+        E[] array = (E[]) currentList;
+        return array[0];
+    }
+
+    public E poll() {
+        E[] array = (E[]) currentList;
+        E element = array[0];
+        int y = 0;
+        if (currentList.length > 0) {
+            Object[] temp = new Object[currentList.length - 1];
+            for (int i = 1; i < currentList.length; i++) {
+                    temp[y] = currentList[i];
+                    y++;
+                }
+            size = size - 1;
+            currentList = temp;
+            }
+
+        return element;
+    }
+
     public void clear() {
         currentList = new Object[] {};
         size = 0;
     }
-
 }
-

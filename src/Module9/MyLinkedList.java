@@ -1,6 +1,4 @@
-
-
-import java.util.LinkedList;
+package Module9;
 
 public class MyLinkedList<E> {
     transient int size = 0;
