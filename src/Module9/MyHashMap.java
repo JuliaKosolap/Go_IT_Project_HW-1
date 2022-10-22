@@ -79,8 +79,17 @@ public class MyHashMap<K, V> {
         if (table.length > 0) {
             for (int i = 0; i < table.length; i++) {
                 if (table[i] != null) {
+                    Node<K, V> x = table[i];
                     if (table[i].key.equals(key)) {
                         return table[i].value;
+                    }
+                        else{
+                            while (x.next != null) {
+                                x = x.next;
+                                if(x.key.equals(key))  {
+                                    return x.value;
+                                }
+                        }
                     }
                 }
             }
