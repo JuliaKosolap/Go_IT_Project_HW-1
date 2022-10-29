@@ -17,6 +17,6 @@ public class MyRandom {
     }
 
     public Long next() {
-        return 1*(a * seed + c) % m;
+        return (a * seed + c) % m;
     }
 }
