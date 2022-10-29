@@ -92,7 +92,7 @@ public class FileHelper {
                     }
                 }
                 Word word = new Word(value, count);
-                hashMap.put(word.value, word.count);
+                hashMap.put(word.getValue(), word.getCount());
 
             }
             Integer[] values = hashMap.values().toArray(new Integer[set.size()]);
@@ -107,36 +107,8 @@ public class FileHelper {
         }
     }
 
-    private class Word {
-        private String value;
-        private int count;
-
-        Word(String word, int count) {
-            this.value = word;
-            this.count = count;
-        }
-    }
-
-    private class Person {
-        private String name;
-        private int age;
 
 
-        Person(String name, int age) {
-            this.name = name;
-            this.age = age;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public int getAge() {
-            return age;
-        }
-
-
-    }
 }
 
 
