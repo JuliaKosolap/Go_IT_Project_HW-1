@@ -54,10 +54,10 @@ public class StreamAPI {
         return result.stream();
     }
 
-    public static Stream<Integer> zipIterator(Stream<Integer> first, Stream<Integer> second) {
-        Iterator<Integer> iteratorFirst = first.iterator();
-        Iterator<Integer> iteratorSecond = second.iterator();
-        List<Integer> result = new ArrayList<>();
+    public static <T> Stream<T> zipIterator(Stream<T> first, Stream<T> second) {
+        Iterator<T> iteratorFirst = first.iterator();
+        Iterator<T> iteratorSecond = second.iterator();
+        List<T> result = new ArrayList<>();
         while (iteratorFirst.hasNext() && iteratorSecond.hasNext()) {
             result.add(iteratorFirst.next());
             result.add(iteratorSecond.next());
