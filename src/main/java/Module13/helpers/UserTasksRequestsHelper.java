@@ -1,6 +1,6 @@
 package Module13.helpers;
 
-import Module13.helpers.objects.UserTask;
+import Module13.objects.UserTask;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import org.jsoup.Jsoup;

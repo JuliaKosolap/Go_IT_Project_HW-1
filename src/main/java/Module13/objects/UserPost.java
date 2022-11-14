@@ -1,10 +1,10 @@
-package Module13.helpers.objects;
+package Module13.objects;
 
-public class UserTask {
+public class UserPost {
     private int userId;
     private int id;
     private String title;
-    private boolean completed;
+    private String body;
 
     public int getUserId() {
         return userId;
@@ -30,21 +30,21 @@ public class UserTask {
         this.title = title;
     }
 
-    public boolean isCompleted() {
-        return completed;
+    public String getBody() {
+        return body;
     }
 
-    public void setCompleted(boolean completed) {
-        this.completed = completed;
+    public void setBody(String body) {
+        this.body = body;
     }
 
     @Override
     public String toString() {
-        return "UserTask{" +
+        return "UserPost{" +
                 "userId=" + userId +
                 ", id=" + id +
                 ", title='" + title + '\'' +
-                ", completed=" + completed +
+                ", body='" + body + '\'' +
                 '}';
     }
 }
