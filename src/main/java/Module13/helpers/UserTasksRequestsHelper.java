@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 
 public class UserTasksRequestsHelper {
     private Gson gson = new Gson();
-    public void getAllUserTasks(String url) throws IOException {
+    public void printAllUserTasks(String url) throws IOException {
 
         String text = Jsoup.connect(url).ignoreContentType(true).get().body().text();
         Type type = TypeToken

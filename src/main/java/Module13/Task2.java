@@ -15,7 +15,7 @@ public class Task2 {
             int lastPostId = helper.getLastUserPostId(URL_USERS + String.valueOf(id) + "/posts");
             String s = String.valueOf(lastPostId);
             String lastPostCommentsUrl = URL_POSTS + s + "/comments";
-            helper.getLastPostComments(lastPostCommentsUrl, "user-" + id + "-post-" + lastPostId + "-comments.json");
+            helper.writeLastPostCommentsIntoFile(lastPostCommentsUrl, "user-" + id + "-post-" + lastPostId + "-comments.json");
             id++;
         }
     }

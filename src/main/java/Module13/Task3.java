@@ -11,7 +11,7 @@ public class Task3 {
     public static void main(String[] args) throws IOException {
         UserTasksRequestsHelper helper = new UserTasksRequestsHelper();
         while (id <= 10) {
-            helper.getAllUserTasks(URL + String.valueOf(id) + "/todos");
+            helper.printAllUserTasks(URL + String.valueOf(id) + "/todos");
             id++;
         }
     }

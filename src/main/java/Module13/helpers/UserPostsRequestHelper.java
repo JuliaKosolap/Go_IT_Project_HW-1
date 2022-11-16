@@ -33,7 +33,7 @@ public class UserPostsRequestHelper {
         return maxId;
     }
 
-    public void getLastPostComments(String url, String fileName) throws IOException, InterruptedException {
+    public void writeLastPostCommentsIntoFile(String url, String fileName) throws IOException, InterruptedException {
         HttpRequest request = HttpRequest.newBuilder()
                 .GET()
                 .uri(URI.create(url))
